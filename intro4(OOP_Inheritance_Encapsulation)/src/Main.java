@@ -5,11 +5,14 @@ public class Main {
 
 		Student student1 = new Student("Aydın", "Şimşek", "123456", 1997, "kullanici1", "password1");
 		Student student2 = new Student("Eren", "Şimşek", "114477", 2005, "kullanici2", "password2");
+		Student[] students = { student1, student2 };
 
 		StudentManager studentManager = new StudentManager();
 		studentManager.add(student1);
 		studentManager.delete(student1);
 		studentManager.update(student1);
+		studentManager.informationStudent(student1);
+		studentManager.informationStudent(students);
 
 		System.out.println("------------------------------------------------------------------------");
 
@@ -24,16 +27,17 @@ public class Main {
 
 		InstructorManager instructorManager = new InstructorManager();
 		instructorManager.add(instructor1);
-		instructorManager.add(instructor1);
-		instructorManager.add(instructor1);
+		instructorManager.delete(instructor1);
+		instructorManager.update(instructor1);
+		instructorManager.instructorInformation(instructor1);
 
 		System.out.println("------------------------------------------------------------------------");
 
-		BaseUserManager baseUserManager=new BaseUserManager();
+		BaseUserManager baseUserManager = new BaseUserManager();
 		baseUserManager.add(student1);
 		baseUserManager.delete(student2);
 		baseUserManager.update(instructor1);
-		
+
 	}
 
 }
